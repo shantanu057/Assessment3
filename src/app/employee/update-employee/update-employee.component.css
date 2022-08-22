@@ -1,0 +1,21 @@
+.example-form {
+    /* min-width: 150px; */
+    max-width: 90%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .container{
+    height: 510px;
+    width: 80%;
+    border: 5px;
+    border-style: double;
+    background-color: rgb(255, 255, 255);
+}
+
+.inputwidth{
+    width: 300px;
+}

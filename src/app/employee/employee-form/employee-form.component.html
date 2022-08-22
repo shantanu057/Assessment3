@@ -1,0 +1,150 @@
+
+<body>
+    <br>
+    <h1 style="text-align: center;">Create Employee</h1>
+    <br>
+    <form style="margin-left: 150px;" class="example-form" #personForm="ngForm" (ngSubmit)="savePerson(personForm)">
+    
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+        <h4>First Name</h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input required id="firstname" name="firstname" matInput placeholder="Enter First Name" #firstnameControl="ngModel" ngModel>
+          <mat-error>
+            First Name is <strong>Required*</strong>
+          </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+        <h4>Middle Name</h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Middle Name</mat-label>
+          <input required id="middlename" name="middlename" matInput placeholder="Enter Middle Name" ngModel #middlenameControl="ngModel">
+          <mat-error>
+            Middle Name is <strong>Required*</strong>
+          </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+        <h4>Last Name</h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input required id="lastname" name="lastname" matInput placeholder="Enter Last Name" ngModel #lastnameControl="ngModel">
+          <mat-error>
+            Last Name is <strong>Required*</strong>
+          </mat-error>
+        </mat-form-field>
+    </div>
+
+    </div>
+        <br>
+
+    <div class="row col-sm-12">   
+        <div class="col-sm-4"> 
+        <h4>Employee Type</h4>
+            <mat-form-field appearance="fill">
+            <mat-label>Emp Type</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let dept of dep" [value]="dept.value">
+                {{dept.viewValue}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="col-sm-4">
+            <h4>Gender</h4>
+            <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let gend of gen" [value]="gend.value">
+                {{gend.viewValue}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field> 
+        </div>  
+        
+        <div class="col-sm-4">
+        <h4>Pincode</h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Pincode</mat-label>
+          <input type="number" required id="pincode" name="pincode" matInput placeholder="Enter Pincode" ngModel #pinControl="ngModel">
+          <mat-error *ngIf="pinControl.value==''">
+            Pincode is <strong>Required*</strong>
+          </mat-error>
+          <mat-error *ngIf="pinControl.value<100000 || pinControl.value>999999">
+            <!-- Pincode is <strong>Incorrect</strong> -->
+          </mat-error>
+        </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+          <h4>Address </h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Address </mat-label>
+          <input required id="add1" name="add1" matInput placeholder="Enter Address" ngModel  #add1Control="ngModel">
+          <mat-error *ngIf="add1Control.value==''">
+            Address1 is <strong>Required*</strong>
+          </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+          <h4>Contact no</h4>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Contact no </mat-label>
+          <input required id="contact" name="contact" matInput placeholder="Enter Contact" ngModel  #ContControl="ngModel">
+          <mat-error *ngIf="ContControl.value==''">
+            Contact is <strong>Required*</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <div class="col-sm-4">
+            <h4>Email</h4>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email </mat-label>
+            <input required id="email" name="email" type="email" matInput placeholder="Enter Contact" ngModel  #EmailControl="ngModel">
+            <mat-error *ngIf="ContControl.value==''">
+              Email is <strong>Required*</strong>
+            </mat-error>
+          </mat-form-field>
+    </div>
+
+    <div class="col-sm-4">
+          <label>DOB</label>
+        <br><br>
+        <input required type="date" name="date" id="date">
+
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> -->
+    </div>
+    
+    
+    </div>
+
+    <div class="col-sm-6">
+        <br>
+        <div class="example-button-row">
+            <button style="margin-left: 430px;" (click)="onButtonClick()" mat-raised-button color="primary">Submit</button>
+            </div>
+        </div>
+        
+      </form>
+    <br>
+
+
+
+
+
+
+
+</body>

@@ -1,0 +1,67 @@
+
+<body>
+    <h1  style="text-align: center;">Details Of {{EmpFname }}{{EmpLname}}</h1>
+    
+    <div class="container">
+        <br>
+        <div class="row col-sm-12" >
+            <div class="col-md-1"></div>
+            <div class="col-sm-3">
+                <h1>Employee ID</h1>
+                <h2 >{{EmpId}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1>First Name</h1>   
+                <h2>{{EmpFname}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1>Middle Name</h1>   
+                <h2>{{EmpMname}}</h2>
+            </div>    
+        </div><hr>
+    
+        <div class="row col-sm-12" >
+            <div class="col-md-1"></div>
+            <div class="col-sm-3">
+                <h1>Last Name</h1>
+                <h2 >{{EmpLname}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1 >Age</h1>   
+                <h2 >{{EmpAge}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1>Gender</h1>   
+                <h2>{{EmpGender}}</h2>
+            </div>    
+        </div><hr>
+    
+        <div class="row col-sm-12">
+            <div class="col-md-1"></div>
+            <div class="col-sm-3">
+                <h1>Pincode</h1>
+                <h2 >{{EmpPincode}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1>Address </h1>   
+                <h2>{{EmpAddress1}}</h2>
+            </div>
+            <div class="col-sm-3"> 
+                <h1>Contact No</h1>   
+                <h2>{{EmpContact}}</h2>
+            </div>    
+        </div><hr>
+    
+        <div class="row col-sm-12" >
+            <div class="col-md-1"></div>
+            <div class="col-sm-6">
+                <h1>Email</h1>
+                <h2 >{{EmpEmail}}</h2>
+            </div>
+            <div class="col-sm-4" style="margin-top:20px"> 
+                <button type="button" class="btn btn-primary" [routerLink]="['/app-employee-details']">Back To Employee Details</button>
+            </div>
+        </div>
+    </div>
+    
+    </body>

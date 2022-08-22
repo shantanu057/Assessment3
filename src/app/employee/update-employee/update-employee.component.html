@@ -1,0 +1,86 @@
+<h1 style="text-align: center;">Update Details Of {{EmpFname}} {{EmpLname}}</h1>
+
+<form class="example-form" style="margin-left: 65px;">
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee ID</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpId" name="Empid" placeholder="Employee ID">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpFname" name="firstname" placeholder="First Name">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Middle Name</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpMname" name="middlename" placeholder="Middle Name">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpLname" name="lastname" placeholder="Last Name">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Age</mat-label>
+            <input matInput type="number" [(ngModel)]="EmpAge" name="age" placeholder="Age">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Gender</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpGender" name="gender" placeholder="Gender">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Pincode</mat-label>
+            <input matInput type="number" [(ngModel)]="EmpPincode" name="pincode" placeholder="Pincode">
+            </mat-form-field>
+        </div>
+
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address 1</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpAddress1" name="address1" placeholder="Address 1">
+            </mat-form-field>
+        </div>
+
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="text" [(ngModel)]="EmpContact" name="contact" placeholder="">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="number" [(ngModel)]="EmpEmail" name="email" placeholder="email">
+            </mat-form-field>
+        </div>
+
+        <div class="col-sm-3" style="margin-left: 70px;margin-top:10px">
+            <button type="button" class="btn btn-success" >Update Employee Details</button>
+        </div>
+
+        <div class="col-sm-3" style="margin-left: 80px;margin-top:10px">
+            <button type="button" class="btn btn-primary" [routerLink]="['/app-employee-details']">Back To Employee Details</button>
+        </div>
+    </div>
+</form> 
+
